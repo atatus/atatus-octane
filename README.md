@@ -1,6 +1,6 @@
 # Atatus Laravel Octane Middleware
 
-Atatus Laravel Swoole Middleware allows for the automatic capture of API request and sends them to [Atatus](https://www.atatus.com).
+The Atatus Laravel Octane Middleware enables the automatic instrumentation of API requests, capturing them and sending data to [Atatus for analysis](https://www.atatus.com).
 
 
 ## Requirements
