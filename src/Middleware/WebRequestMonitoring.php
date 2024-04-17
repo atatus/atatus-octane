@@ -38,7 +38,7 @@ class WebRequestMonitoring implements TerminableInterface
             atatus_begin_transaction();
             atatus_set_background_transaction(false);
             atatus_set_transaction_name($request->route()->uri());
-	      }
+        }
 
     }
 
