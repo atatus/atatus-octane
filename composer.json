@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Atatus\\Laravel\\": "src/"
+            "Atatus\\Laravel\\Octane\\": "src/"
         }
     },
     "require-dev": {
