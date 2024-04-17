@@ -1,7 +1,7 @@
 {
     "name": "atatus/atatus-octane",
     "description": "Atatus APM monitoring for Octane",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "keywords": ["Octane", "Atatus", "APM", "monitoring", "integration"],
     "homepage": "https://github.com/atatus/atatus-octane",
     "license": "Apache-2.0",
