@@ -45,6 +45,10 @@ class WebRequestMonitoring implements TerminableInterface
     public function terminate(Request $request, Response $response): void
     {
         if (extension_loaded('atatus')) {
+            if (function_exists('atatus_set_status_code')) {
+                atatus_set_status_code($response->getStatusCode());
+            }
+
             atatus_end_transaction();
         }
     }
