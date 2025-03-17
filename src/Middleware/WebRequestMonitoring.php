@@ -38,6 +38,17 @@ class WebRequestMonitoring implements TerminableInterface
             atatus_begin_transaction();
             atatus_set_background_transaction(false);
             atatus_set_transaction_name($request->route()->uri());
+
+            // Call atatus_set_remote_ip() only if the function exists
+            if (function_exists('atatus_set_remote_ip')) {
+
+                // Get real client IP from X-Forwarded-For, request()->ip(), or REMOTE_ADDR
+                $real_ip = $request->header('X-Forwarded-For')
+                            ? explode(',', $request->header('X-Forwarded-For'))[0]
+                            : ($request->ip() ?? $request->server('REMOTE_ADDR') ?? '');
+
+                atatus_set_remote_ip($real_ip);
+            }
         }
 
     }
